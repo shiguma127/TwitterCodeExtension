@@ -10,17 +10,30 @@
         {
             "matches": [
                 "https://tweetdeck.twitter.com/*",
-                "https://tweetdeck.twitter.com/",
+                "https://tweetdeck.twitter.com/"
+            ],
+            "js": [
+                "marked.min.js",
+                "highlight/highlight.pack.js",
+                "TweetDeck/script.js"
+            ],
+            "css": [
+                "TweetDeck/code-style.css",
+                "highlight/styles/a11y-dark.css"
+            ]
+        },
+        {
+            "matches": [
                 "https://twitter.com/*"
             ],
             "js": [
                 "marked.min.js",
                 "highlight/highlight.pack.js",
-                "script.js"
+                "Twitter/script.js"
             ],
             "css": [
                 "test.css",
-                "code-style.css",
+                "Twitter/code-style.css",
                 "highlight/styles/a11y-dark.css"
             ]
         }
