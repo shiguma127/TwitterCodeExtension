@@ -1,3 +1,4 @@
-pre{
+pre.hljs{
     overflow: auto;
+    margin: 0;
 }

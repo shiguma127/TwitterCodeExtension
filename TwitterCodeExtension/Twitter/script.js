@@ -1,11 +1,5 @@
 const reg = new RegExp(/`{3}(.|\n)*`{3}/)
 hljs.highlightAll()
-function change() {
-    let elements = document.getElementsByClassName('js-tweet-text tweet-text with-linebreaks');
-    for (element of elements) {
-        console.log(element)
-    }
-}
 
 marked.setOptions({
     highlight: function (code, lang) {
@@ -14,8 +8,7 @@ marked.setOptions({
 });
 
 const observer = new MutationObserver(() => {
-    console.log("変わったよ")
-    let elements = document.getElementsByTagName('p')
+    let elements = document.getElementsByClassName('r-bcqeeo')
     for (element of elements) {
         const text = element.textContent
         if (text.match(reg) !== null) {
