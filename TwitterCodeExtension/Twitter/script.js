@@ -1,14 +1,21 @@
 const reg = new RegExp(/`{3}(.|\n)*`{3}/)
-hljs.highlightAll()
-
 marked.setOptions({
     highlight: function (code, lang) {
         return hljs.highlightAuto(code, [lang]).value
     }
 });
+chrome.storage.sync.get({ style: 'a11y-dark.css' }, function (value) {
+    const styleElement = document.createElement('link')
+    styleElement.rel = "stylesheet"
+    const styleURL = chrome.extension.getURL('highlight/styles/' + value.style)
+    styleElement.setAttribute('href', styleURL)
+    styleElement.setAttribute("id", 'code-style')
+    const head = document.getElementsByTagName('head')
+    head[0].appendChild(styleElement)
+})
 
 const observer = new MutationObserver(() => {
-    let elements = document.getElementsByClassName('r-bcqeeo')
+    let elements = document.getElementsByClassName('css-901oao css-16my406 r-1tl8opc r-bcqeeo r-qvutc0')
     for (element of elements) {
         const text = element.textContent
         if (text.match(reg) !== null) {
@@ -18,10 +25,6 @@ const observer = new MutationObserver(() => {
     }
     hljs.highlightAll()
 })
-
-setTimeout(() => {
-    hljs.highlightAll()
-}, 5000)
 
 observer.observe(document.body, {
     attributes: true,

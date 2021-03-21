@@ -2,28 +2,29 @@
 <html>
 
 <head>
-    <title>Options</title>
+  <title>Options</title>
 </head>
-
-<link rel="stylesheet" href="highlight/styles/a11y-dark.css" />
+<link rel="stylesheet" href="options.css" />
+<link rel="stylesheet" href="highlight/styles/a11y-dark.css" id="style" />
 <script src="highlight/highlight.pack.js"></script>
 
 <body>
-    <select id="selector">
-    </select>
+  <select id="selector">
+  </select>
 
-    <pre><code>class Main{
-          public static void main(String args[]){
-            String hello = "Hello";
-            String world = "World";
-            System.out.println(hello + world);
-            // HelloWorld
-          }
-        }
+  <pre><code>
+public class Main {
+  public static void main(String[] args){
+  	String hello = "Hello";
+  	String world = "World";
+  	System.out.println(hello + world);
+  	//Hello World
+    }
+}
           </code></pre>
-    <button id="save">Save</button>
+  <button id="save">Save</button>
 
-    <script src="options.js"></script>
+  <script src="options.js"></script>
 </body>
 
 </html>

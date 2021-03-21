@@ -38,6 +38,9 @@
             ]
         }
     ],
+    "web_accessible_resources": [
+        "highlight/styles/*.css"
+    ],
     "background": {
         "page": "background.html",
         "background": {
@@ -46,5 +49,8 @@
             ]
         }
     },
-    "options_page": "options.html"
+    "options_page": "options.html",
+    "permissions": [
+        "storage"
+    ]
 }
