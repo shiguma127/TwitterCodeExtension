@@ -39,7 +39,12 @@
         }
     ],
     "background": {
-        "page": "background.html"
+        "page": "background.html",
+        "background": {
+            "scripts": [
+                "hot-reload.js"
+            ]
+        }
     },
     "options_page": "options.html"
 }
