@@ -20,7 +20,7 @@ chrome.runtime.getPackageDirectoryEntry(function (directoryEntry) {
                         option.value = filename;
                         selector.appendChild(option);
                     }
-                    chrome.storage.sync.get({ style: 'a11y - dark.css' }, function (value) {
+                    chrome.storage.sync.get({ style: 'a11y-dark.css' }, function (value) {
                         console.log(value);
                         const index = Array.from(selector.options).findIndex((option) => option.value === value.style);
                         selector.options[index].selected = true
