@@ -19,7 +19,6 @@ const observer = new MutationObserver(() => {
     for (element of elements) {
         const text = element.textContent
         if (text.match(reg) !== null) {
-            console.log(marked(text).replaceAll('<pre>', '<pre class="hljs"'))
             element.innerHTML = marked(text).replaceAll('<pre>', '<pre class="hljs"')
         }
     }
