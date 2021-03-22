@@ -12,7 +12,7 @@ selecter.addEventListener('change', () => {
 })
 
 const getCssFiles = async function () {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve, _) => {
         chrome.runtime.getPackageDirectoryEntry(function (directoryEntry) {
             directoryEntry.getDirectory('highlight/styles', {}, function (stylesDir) {
                 console.log(stylesDir)
